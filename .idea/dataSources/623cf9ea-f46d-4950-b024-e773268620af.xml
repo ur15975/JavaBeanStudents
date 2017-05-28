@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="db1@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="db1">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="jsp_db"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="test"/>
+    <schema id="9" parent="1" name="jikexueyuanstudent">
+      <Visible>1</Visible>
+    </schema>
+    <table id="10" parent="2" name="sheet1"/>
+    <table id="11" parent="2" name="sheet2"/>
+    <table id="12" parent="2" name="sheet3"/>
+    <table id="13" parent="2" name="sheet4"/>
+    <table id="14" parent="9" name="studentinfo"/>
+    <table id="15" parent="9" name="usertable"/>
+    <column id="16" parent="10" name="time">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="10" name="chineseLine">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="18" parent="10" name="englishLine">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="19" parent="10" name="characterId">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="20" parent="10" name="sceneId">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="21" parent="10" name="characterId">
+      <ColNames>characterId</ColNames>
+    </index>
+    <index id="22" parent="10" name="sceneId">
+      <ColNames>sceneId</ColNames>
+    </index>
+    <key id="23" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>time</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="24" parent="10" name="sheet1_ibfk_1">
+      <ColNames>characterId</ColNames>
+      <RefSchemaName>db1</RefSchemaName>
+      <RefTableName>sheet2</RefTableName>
+      <RefColNames>CharacterId</RefColNames>
+    </foreign-key>
+    <foreign-key id="25" parent="10" name="sheet1_ibfk_2">
+      <ColNames>sceneId</ColNames>
+      <RefSchemaName>db1</RefSchemaName>
+      <RefTableName>sheet3</RefTableName>
+      <RefColNames>sceneId</RefColNames>
+    </foreign-key>
+    <column id="26" parent="11" name="CharacterId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="11" name="CharacterName">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="28" parent="11" name="CharacterChineseName">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="29" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CharacterId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="12" name="sceneId">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="12" name="sceneName">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="32" parent="12" name="sceneTime">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="33" parent="12" name="sceneLine">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <key id="34" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>sceneId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="13" name="时间">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="13" name="中文台词">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="37" parent="13" name="英文台词">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="38" parent="13" name="characterId">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="39" parent="13" name="sceneId">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="40" parent="13" name="characterId">
+      <ColNames>characterId</ColNames>
+    </index>
+    <index id="41" parent="13" name="sceneId">
+      <ColNames>sceneId</ColNames>
+    </index>
+    <key id="42" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>时间</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="44" parent="14" name="nicheng">
+      <Position>2</Position>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="45" parent="14" name="truename">
+      <Position>3</Position>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="46" parent="14" name="xingbie">
+      <Position>4</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <column id="47" parent="14" name="birthday">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="48" parent="14" name="zhuanye">
+      <Position>6</Position>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <column id="49" parent="14" name="kecheng">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="50" parent="14" name="xingqu">
+      <Position>8</Position>
+      <DataType>char(20)|0</DataType>
+    </column>
+    <column id="51" parent="14" name="beizhu">
+      <Position>9</Position>
+      <DataType>varchar(500)|0</DataType>
+    </column>
+    <key id="52" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="15" name="username">
+      <Position>1</Position>
+      <DataType>char(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="15" name="password">
+      <Position>2</Position>
+      <DataType>char(10)|0</DataType>
+    </column>
+    <key id="55" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>username</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
