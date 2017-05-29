@@ -123,4 +123,16 @@ public class StudentService {
             return false;
         }
     }
+
+    public boolean deleteStudent(int id) {
+        try {
+            preparedStatement = connection.prepareStatement("DELETE FROM jikexueyuanstudent.studentinfo WHERE id = ?)");
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
