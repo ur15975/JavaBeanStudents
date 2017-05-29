@@ -1,109 +1,95 @@
 package com.jikexueyuan.model;
-
-import java.sql.Date;
-
 public class Studentinfo {
-  private Long id;
-  private String nicheng;
-  private String truename;
-  private String xingbie;
-  private java.sql.Date birthday;
-  private String zhuanye;
-  private String[] kechengs = {""};
-  private String kecheng = "";
-  private String[] xingqus = {""};
-  private String xingqu = "";
-  private String beizhu;
-
-    public Long getId() {
+    private int id;
+    private String nicheng;
+    private String truename;
+    private byte xb;
+    private String csrq;
+    private String zy;
+    private String[] kc = { "" };
+    private String kcs = "";
+    private String[] xq = { "" };
+    private String xqs = "";
+    private String bz;
+    public int getId() {
         return id;
     }
-
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
-
     public String getNicheng() {
         return nicheng;
     }
-
     public void setNicheng(String nicheng) {
         this.nicheng = nicheng;
     }
-
     public String getTruename() {
         return truename;
     }
-
     public void setTruename(String truename) {
         this.truename = truename;
     }
-
-    public String getXingbie() {
-        return xingbie;
+    public byte getXb() {
+        return xb;
     }
-
-    public void setXingbie(String xingbie) {
-        this.xingbie = xingbie;
+    public void setXb(byte xb) {
+        this.xb = xb;
     }
-
-    public Date getBirthday() {
-        return birthday;
+    public String getCsrq() {
+        return csrq;
     }
-
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
+    public void setCsrq(String csrq) {
+        this.csrq = csrq;
     }
-
-    public String getZhuanye() {
-        return zhuanye;
+    public String getZy() {
+        return zy;
     }
-
-    public void setZhuanye(String zhuanye) {
-        this.zhuanye = zhuanye;
+    public void setZy(String zy) {
+        this.zy = zy;
     }
-
-    public String[] getKechengs() {
-        return kechengs;
+    public String[] getKc() {
+        return kc;
     }
-
-    public void setKechengs(String[] kechengs) {
-        this.kechengs = kechengs;
+    public void setKc(String[] kc) {
+        this.kc = kc;
     }
-
-    public String getKecheng() {
-        if (kecheng != null) {
-            for (int i = 0; i < k; i++) {
-                
-            }
+    public String getKcs() {
+        if(kc!=null)
+        {
+            kcs = "";
+            for(int i=0;i<kc.length;i++)
+                kcs+=kc[i]+"&";
         }
+        kcs=kcs.substring(0,kcs.length()-1);
+        return kcs;
+    }
+    public void setKcs(String kcs) {
+        this.kcs = kcs;
+    }
+    public String[] getXq() {
+        return xq;
+    }
+    public void setXq(String[] xq) {
+        this.xq = xq;
+    }
+    public String getXqs() {
+        if(xq!=null)
+        {
+            xqs="";
+            for(int i=0;i<xq.length;i++)
+                xqs+=xq[i]+"&";
+        }
+        xqs=xqs.substring(0,xqs.length()-1);
+        return xqs;
+    }
+    public void setXqs(String xqs) {
+        this.xqs = xqs;
+    }
+    public String getBz() {
+        return bz;
+    }
+    public void setBz(String bz) {
+        this.bz = bz;
     }
 
-    public void setKecheng(String kecheng) {
-        this.kecheng = kecheng;
-    }
-
-    public String[] getXingqus() {
-        return xingqus;
-    }
-
-    public void setXingqus(String[] xingqus) {
-        this.xingqus = xingqus;
-    }
-
-    public String getXingqu() {
-        return xingqu;
-    }
-
-    public void setXingqu(String xingqu) {
-        this.xingqu = xingqu;
-    }
-
-    public String getBeizhu() {
-        return beizhu;
-    }
-
-    public void setBeizhu(String beizhu) {
-        this.beizhu = beizhu;
-    }
 }

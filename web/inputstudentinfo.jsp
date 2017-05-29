@@ -1,89 +1,88 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ur15975@outlook.com
-  Date: 2017/5/27
-  Time: 16:35
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+    String path = request.getContextPath();
+    String basePath = request.getScheme() + "://"
+            + request.getServerName() + ":" + request.getServerPort()
+            + path + "/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <title>Title</title>
+    <base href="<%=basePath%>">
+
+    <title>My JSP 'inputstuinfo.jsp' starting page</title>
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <!--
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        -->
+
 </head>
 <jsp:include page="islogin.jsp"></jsp:include>
 <body>
-<form action="inputstudentinfo_result.jsp" method="post">
-    <table bgcolor="#c0c0c0" align="center">
-        <tr>
-            <td align="center" bgcolor="green" colspan="2">
-                <font color="white">录入学生信息</font>
-            </td>
-        </tr>
-        <tr>
-            <td>昵称：</td>
-            <td><input type="text" size="20" name="nickname"></td>
-        </tr>
-        <tr>
-            <td>真实姓名：</td>
-            <td><input type="text" size="20" name="realname"></td>
-        </tr>
-        <tr>
-            <td>性别</td>
-            <td>
-                <input type="radio"  name="sex" value="0">男
-                <input type="radio" name="sex" value="1">女
-            </td>
-        </tr>
-        <tr>
-            <td>出生日期：</td>
-            <td>
-                <input type="text" name="birthday" size="20">
-            </td>
-        </tr>
-        <tr>
-            <td>所学专业：</td>
-            <td>
-                <select name="zhuanye">
+<center>
+    <form action="inputstudentinfo_result.jsp" method="post">
+        <table bgColor="#c0c0c0">
+            <tr>
+                <td align="center" bgcolor=green colspan=2><font color=white>学生信息录入</font></td>
+            </tr>
+            <tr>
+                <td>昵称：</td>
+                <td><input type="text" size=20 name="nicheng"></td>
+            </tr>
+            <tr>
+                <td>真实姓名：</td>
+                <td><input type="text" size=20 name="truename"></td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td><input type="radio" name="xb" checked value="1">男&nbsp;&nbsp;
+                    <input type="radio" name="xb" value="0">女</td>
+            </tr>
+            <tr>
+                <td>出生日期：</td>
+                <td><input type="text" name="csrq" size=20></td>
+            </tr>
+            <tr>
+                <td>所学专业：</td>
+                <td><select name="zy">
                     <option>计算机科学与技术</option>
-                    <option>通信工程</option>
+                    <option selected>通信工程</option>
                     <option>电气工程</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>所学课程：</td>
-            <td>
-                <select name="lessons" size="4" multiple="multiple">
-                    <option>计算机科学导论</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>所学课程：</td>
+                <td><select name="kc" size=2 multiple="multiple">
+                    <option>计算机导论</option>
                     <option>数据结构</option>
                     <option>数据库原理</option>
+
                     <option>操作系统</option>
                     <option>计算机网络</option>
                     <option>软件工程</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>兴趣：</td>
-            <td>
-                <input type="checkbox" value="music" name="hobby">听音乐
-                <input type="checkbox" value="novel" name="hobby">看小说
-                <input type="checkbox" value="internet" name="hobby">上网
-            </td>
-        </tr>
-        <tr>
-            <td>备注：</td>
-            <td>
-                <textarea rows="3" cols="20" name="notes"></textarea>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" colspan="2">
-                <input type="submit" value="提交">
-                <input type="reset" value="重置">
-            </td>
-        </tr>
-    </table>
-</form>
+                </select></td>
+            </tr>
+            <tr>
+                <td>兴趣</td>
+                <td><input type="checkbox" value="music" name="xq">听音乐&nbsp;
+                    <input type="checkbox" value="book" name="xq">看小说&nbsp; <input
+                            type="checkbox" value="web" name="xq">上网&nbsp;</td>
+            </tr>
+            <tr valign="top">
+                <td>备注</td>
+                <td><textarea rows=3 cols=20 name="bz"></textarea></td>
+            </tr>
+            <tr ><td align="center" colspan="2" ><input type="submit"  value="提交">&nbsp;&nbsp; <input
+                    type="reset"  value="重置"></td></tr>
+        </table>
+
+    </form>
+</center>
 </body>
 </html>

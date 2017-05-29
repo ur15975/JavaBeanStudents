@@ -151,27 +151,27 @@
       <Position>3</Position>
       <DataType>char(10)|0</DataType>
     </column>
-    <column id="46" parent="14" name="xingbie">
+    <column id="46" parent="14" name="xb">
       <Position>4</Position>
       <DataType>bit(1)|0</DataType>
     </column>
-    <column id="47" parent="14" name="birthday">
+    <column id="47" parent="14" name="csrq">
       <Position>5</Position>
       <DataType>date|0</DataType>
     </column>
-    <column id="48" parent="14" name="zhuanye">
+    <column id="48" parent="14" name="zy">
       <Position>6</Position>
       <DataType>char(10)|0</DataType>
     </column>
-    <column id="49" parent="14" name="kecheng">
+    <column id="49" parent="14" name="kc">
       <Position>7</Position>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="50" parent="14" name="xingqu">
+    <column id="50" parent="14" name="xq">
       <Position>8</Position>
       <DataType>char(20)|0</DataType>
     </column>
-    <column id="51" parent="14" name="beizhu">
+    <column id="51" parent="14" name="bz">
       <Position>9</Position>
       <DataType>varchar(500)|0</DataType>
     </column>
